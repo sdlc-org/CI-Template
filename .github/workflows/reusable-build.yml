@@ -3,13 +3,13 @@ name: Reusable Build
 on:
   workflow_call:
     inputs:
-      service-name:
+      message:
         required: true
         type: string
 
 jobs:
-  build:
+  echo-message:
     runs-on: ubuntu-latest
     steps:
       - name: message
-      - run: echo "Building ${{ inputs.message }}"
+      - run: echo "Reusable workflow says: ${{ inputs.message }}"
