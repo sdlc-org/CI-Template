@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo input message
-        run: echo "Reusable workflow says: ${{ inputs.message }}"
+        run: echo "Reusable workflow says:${{ inputs.message }}"
