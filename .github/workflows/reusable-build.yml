@@ -18,6 +18,6 @@ jobs:
         run: ls -alh 
 
       - name: Run shell script
-        run: bash ./test.sh "${{ inputs.message }}"
+        run: bash ./workflows/test.sh "${{ inputs.message }}"
 
         # run: echo "Reusable workflow says:${{ inputs.message }}"
