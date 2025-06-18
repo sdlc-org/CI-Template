@@ -11,8 +11,13 @@ jobs:
   echo-message:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo input message
-        uses: actions/Checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        
+      - name: List files in repo
+        run: ls -alh 
+
       - name: Run shell script
-        run: bash ./test.sh "${{inputs.message}}"
+        run: bash ./test.sh "${{ inputs.message }}"
+
         # run: echo "Reusable workflow says:${{ inputs.message }}"
