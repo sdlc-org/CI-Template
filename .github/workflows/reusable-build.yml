@@ -12,4 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo input message
-        run: echo "Reusable workflow says:${{ inputs.message }}"
+        uses: actions/Checkout@v3
+      - name: Run shell script
+        run: bash ./test.sh "${{inputs.message}}"
+        # run: echo "Reusable workflow says:${{ inputs.message }}"
