@@ -1,0 +1,15 @@
+name: Reusable Build
+
+on:
+  workflow_call:
+    inputs:
+      service-name:
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "Building ${{ inputs.service-name }}"
